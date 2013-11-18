@@ -10,7 +10,7 @@
 
 
 class Book
-  attr_reader :title, :author, :publisher, :isbn10, :dimensions, :weight
+  attr_reader :title, :author, :publisher, :isbn10, :dimensions, :weight, :price
   def initialize(num)
     @num =num
     #converts the file to a utf-8 string
@@ -19,11 +19,12 @@ class Book
     @isbn10 = get_isbn10
     @weight = get_weight
     @dimensions = get_dimensions
+    @price = get_price
     get_title_author
   end
 
   def hash
-    {"Title"=> @title, "Author(s)" => @author, "publisher" => @publisher, "isbn10" => @isbn10, "dimensions" => @dimensions, "weight" => @weight}
+    {"Title"=> @title, "Author(s)" => @author, "publisher" => @publisher, "isbn10" => @isbn10, "dimensions" => @dimensions, "weight" => @weight, "price" => @price}
   end
 
 
