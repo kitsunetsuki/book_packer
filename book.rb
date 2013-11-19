@@ -48,7 +48,7 @@ private
 
   #currently returns weight without checking if it is in pounds or kg. possibly add check for units of measurement?
   def get_weight
-   (@contents[/(?<=(Shipping Weight:<\/b>)\s).*(?=\s\()/])[/\d*.\d*/]
+   ((@contents[/(?<=(Shipping Weight:<\/b>)\s).*(?=\s\()/])[/\d*.\d*/]).to_f
 
   end
 
