@@ -1,4 +1,5 @@
 
+
 # each page is a book object. initialize by scraping with ALL THE REGEX
 
     # Title
@@ -7,9 +8,8 @@
     # Shipping Weight
     # ISBN-10
 
-
-
 class Book
+  include 'float.rb'
   attr_reader :title, :author, :publisher, :isbn10, :dimensions, :weight, :price
   def initialize(num)
     @num =num
@@ -48,7 +48,7 @@ private
 
   #currently returns weight without checking if it is in pounds or kg. possibly add check for units of measurement?
   def get_weight
-   ((@contents[/(?<=(Shipping Weight:<\/b>)\s).*(?=\s\()/])[/\d*.\d*/]).to_f
+   ((@contents[/(?<=(Shipping Weight:<\/b>)\s).*(?=\s\()/])[/\d*.\d*/]).to_f.round_to(2)
 
   end
 
