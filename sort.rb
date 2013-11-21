@@ -1,4 +1,3 @@
-require 'json'
 require_relative 'float'
 require_relative 'book'
 
@@ -16,6 +15,8 @@ class Boxes
     @small_books = []
     @boxed_books = []
     @max_weight = max_weight
+    sort_books
+    put_in_boxes
   end
 
   def get_books
@@ -41,14 +42,12 @@ class Boxes
       end
       #first, determine if there are any books that are too heavy to share a box, and put them in their own box
       if @space < @books.last["weight"]
-        puts "#{book["Title"]} gets its own box! because the remainder is weighs #{@space}, and the smallest book weighs #{@books.last['weight']}"
         @boxes = {"box#{@boxcount}" => {"id" => "#{boxcount}", "total_weight" => book["weight"], "contents" => [book]}}
         @boxcount+=1
         @boxed_books << book
 
         #if the book couldn't go into a box with the box with the most space in the large books array, it also joins the large books array
       elsif (book["weight"] > @most_space)
-        puts "#{book["Title"]} into the large_books array. the books weight is #{book["weight"]}"
         @large_books << book
       end
     end
