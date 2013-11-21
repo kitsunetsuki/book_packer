@@ -1,4 +1,4 @@
-
+require_relative "float"
 
 # each page is a book object. initialize by scraping with ALL THE REGEX
 
@@ -9,7 +9,6 @@
     # ISBN-10
 
 class Book
-  include 'float.rb'
   attr_reader :title, :author, :publisher, :isbn10, :dimensions, :weight, :price
   def initialize(num)
     @num =num
