@@ -5,7 +5,7 @@
 
 To run this program, navigate to the book_packer directory, and type in your console:
 
-'ruby main.rb'
+`ruby main.rb`
 
 and it will return a json object
 
