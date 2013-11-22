@@ -1,5 +1,14 @@
 # Book Packer
 
+
+##
+
+To run this program, navigate to the book_packer directory, and type in your console:
+
+'ruby main.rb'
+
+and it will return a json object
+
 ## Purpose
 
 This exercise is designed to test your ability to use object-oriented design principles, data structures and standard algorithms to craft a small application in language of your choice that can be utilized by another developer with little to no fuss. We will not only be looking at the correctness of your solution but at the style of your code, its modularity and extensibility as well as the ease at which the whole package can be built and tested. As a small team we believe these principles are a key element of our continued success. 

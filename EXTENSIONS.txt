@@ -1,0 +1,11 @@
+Once your solution is completed please add an EXTENSIONS.txt file to your solution that notes how your application could be extended to handle the following:
+1. Domains beyond Amazon.com
+2. Products beyond just simply books.
+3. Parse and ship 2,000,000 books (in a reasonably time frame; e.g., polynomial time) instead of merely 20.
+
+1.This could be extended to domains beyond amazon.com by simply adjusting the regular expressions to account for the format of the webpage and placement of the information. as of right now, the sort function creates new book objects(which are really, any amazon.com products), but that could easily be passed in as an option, to create other object types. 
+
+2. The sort.rb functionality could be applied to any type of product, given the product is represented as a hash, and has the key "weight", so it could be used with any other product on amazon, as well as on any other domain. I also scraped for "dimensions", as that would be useful information to have when shipping products, in case it requires a custom box size. It would be interesting to have another layer on this program to determine the box size needed for the product. 
+
+3. I chose to use regular expressions in my parsing because they are faster than using a parser, and also frankly, I know them and figured I could get it done faster than it would take me to learn a parser like nokogiri. At 20 books, the difference is negligable, but I suspect as the order of books being parsed increased, so would the amount of time saved. As far as the algorithm speed goes, I suspect there are some fancy math tricks for dealing with large sets of numbers, and I would spend more time researching methods to handle them in a reasonable amount of time. 
+
